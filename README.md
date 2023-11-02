@@ -16,7 +16,6 @@ This current version is the basic version of the app with the basic features lik
    <br />
   <div>
     <img src="./designs/weather.png" width="95%">
-    
     <img src="./designs/tasks.png" width="95%">
   </div>
    <br />
