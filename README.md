@@ -1,4 +1,4 @@
-# The Minimilistic Open Source Dashboard💜
+# The Minimilistic  Dashboard💜
 
 I developed this app/chrome extension as a side project because I was fascinated with the chrome extension "Momentum" and I wanted to test out my skills to see if I would be able to make something that I can use in my daily life and Viola after a week and a lot stack overflow, here's what I came up with😄.
 
@@ -16,7 +16,7 @@ This current version is the basic version of the app with the basic features lik
    <br />
   <div>
     <img src="./designs/weather.png" width="95%">
-    <img src="./designs/task_empty.png" width="95%">
+    
     <img src="./designs/task_full.png" width="95%">
   </div>
    <br />
@@ -39,7 +39,7 @@ This current version is the basic version of the app with the basic features lik
 
 ## Setting Up The App
 
-If you want a quick preview of the app you can directly visit this [link](https://open-dashboard.vercel.app/)
+If you want a quick preview of the app you can directly visit this [link](https://dashboard.vercel.app/)
 
 ### To use the chrome extension
 
