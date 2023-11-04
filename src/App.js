@@ -42,7 +42,7 @@ const App = () => {
       <button onClick={()=>setNews(!news)}>
        <IconContext.Provider value={{className:'icons',size:'2rem'}}>
 
-         {news ?<TiArrowSortedDown/>: <TiArrowSortedUp/>}
+         { user && news ?<TiArrowSortedDown/>: <TiArrowSortedUp/>}
 
        </IconContext.Provider>
        <IconContext.Provider value={{className:'',size:'2rem',color:'white'}}>
