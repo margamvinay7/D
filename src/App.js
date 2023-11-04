@@ -15,6 +15,7 @@ import Personalize from "./Components/Personalize";
 import fallBackImage from "./data/fallback_bg.jpg";
 import { MdOutlineTimer } from "react-icons/md";
 import Pomodoro from "./Components/Pomodoro";
+import News from "./Components/News";
 
 const App = () => {
   const { user } = useContext(User); //importing the user context which holds the values => name, verified status, theme and current location
@@ -33,6 +34,7 @@ const App = () => {
 
   return (
     <>
+    <News/>
       {/* Check if the name, location, theme and verified exits in the localstorage aka, if the user is new or existing */}
       {/* {console.log(!user.name || !user.currLocation || !user.verified)} */}
       {!user.name || !user.currLocation || !user.verified ? (
