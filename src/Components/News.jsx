@@ -2,8 +2,10 @@ import React, { Fragment } from 'react'
 import { useState,useEffect } from 'react';
 import { FaExternalLinkAlt, } from 'react-icons/fa'
 import { IconContext, } from 'react-icons'
+import { FiAlertCircle } from 'react-icons/fi'
 const News = () => {
     const [news,setNews]=useState([])
+    const [alertMessage,setAlertMessage]=useState(false)
     const [country,setCountry]=useState('in')
     const [category,setCategory]=useState('entertainment')
     //test data
@@ -40,9 +42,9 @@ const newsData = async () => {
 
 useEffect(()=>{
 
-  alert("Please Enter Country Codes in 2 Letters Only, For country codes go to the link https://www.nationsonline.org/oneworld/country_code_list.htm some country codes are America->us,India-in,canada->ca,japan->jp,united kingdom->gb")
+  
    
-     newsData()
+     
     
     },[])
 
@@ -55,14 +57,30 @@ useEffect(()=>{
      
 
     }
+
+    const handleAlert=()=>{
+      setAlertMessage(true)
+    }
+    const handleLeave=()=>{
+      setAlertMessage(false)
+    }
     
   return (
     <>
-    <div className='absolute z-10 mt-2 ml-2  bg-black md:w-[35vw]  h-[90vh] bg-opacity-50 rounded-xl px-4 py-2 overflow-y-scroll todo_container shadow-2xl backdrop-blur-lg'>
+    <div className='absolute z-10 mt-2 ml-2  bg-black sm:w-[45vw] md:w-[35vw] h-[90vh] bg-opacity-50 rounded-xl px-4 py-2 overflow-y-scroll todo_container shadow-2xl backdrop-blur-lg'>
         <div className='flex flex-col items-center '>
             <div className='main_tasks text-white text-2xl mt-3 flex flex-col items-center justify-center'>Customize your News</div>
                 <form className=' flex justify-center flex-col'>
+                  <div className='flex flex-row'>
                     <input placeholder='Enter Country' value={country} className='focus:bg-transparent text-white bg-transparent placeholder:text-lg text-xl mt-3 focus:outline-none placeholder:text-white text-center border-b-[2px] w-[90%] md:w-80' onChange={(e)=>setCountry(e.target.value)} />
+                    <IconContext.Provider value={{ color: "white", className: "global-class-name" ,size:'2rem'}}>
+
+                        <a href='https://www.nationsonline.org/oneworld/country_code_list.htm' target='_blank' className='relative ' alt='country codes'  onMouseOver={handleAlert} onMouseLeave={handleLeave}><FiAlertCircle/>
+                       {alertMessage && <div className='text-white bg-black/60 p-2 rounded-md    w-fit'> Enter Country codes In 2 Letters Click here to Know</div>}
+                        </a> 
+
+                    </IconContext.Provider>
+                    </div>
                     <input placeholder='Enter Category' value={category}className="focus:bg-transparent text-white bg-transparent placeholder:text-lg text-xl mt-3 focus:outline-none placeholder:text-white text-center border-b-[2px] w-[90%] md:w-80 " onChange={(e)=>setCategory(e.target.value)} />
                     <button onClick={(e)=>handleSubmit(e)}  className=" bg-black  text-white p-2 mt-2 rounded-md " >submit</button>
                 </form>
