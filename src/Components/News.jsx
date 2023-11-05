@@ -43,7 +43,7 @@ const newsData = async () => {
 useEffect(()=>{
 
   
-   
+   newsData();
      
     
     },[])
