@@ -76,7 +76,7 @@ useEffect(()=>{
                     <IconContext.Provider value={{ color: "white", className: "global-class-name" ,size:'2rem'}}>
 
                         <a href='https://www.nationsonline.org/oneworld/country_code_list.htm' target='_blank' className='relative ' alt='country codes'  onMouseOver={handleAlert} onMouseLeave={handleLeave}><FiAlertCircle/>
-                       {alertMessage && <div className='text-white bg-black/60 p-2 rounded-md    w-fit'> Enter Country codes In 2 Letters Click here to Know</div>}
+                       {alertMessage && <div className='text-white bg-black/60 p-2 rounded-md  text-sm  w-fit'> Enter Country codes In 2 Letters Click here to Know</div>}
                         </a> 
 
                     </IconContext.Provider>
