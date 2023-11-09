@@ -67,21 +67,21 @@ useEffect(()=>{
     
   return (
     <>
-    <div className='absolute z-10 mt-2 ml-2  bg-black sm:w-[45vw] md:w-[35vw] h-[90vh] bg-opacity-50 rounded-xl px-4 py-2 overflow-y-scroll todo_container shadow-2xl backdrop-blur-lg'>
+    <div className='absolute z-10 mt-2 ml-2   bg-black sm:w-[45vw] md:w-[35vw] h-[98vh] bg-opacity-50 rounded-xl px-4 py-2 overflow-y-scroll todo_container shadow-2xl backdrop-blur-lg'>
         <div className='flex flex-col items-center '>
             <div className='main_tasks text-white text-2xl mt-3 flex flex-col items-center justify-center'>Customize your News</div>
-                <form className=' flex justify-center flex-col'>
+                <form className=' flex justify-center flex-col w-[100%]'>
                   <div className='flex flex-row'>
-                    <input placeholder='Enter Country' value={country} className='focus:bg-transparent text-white bg-transparent placeholder:text-lg text-xl mt-3 focus:outline-none placeholder:text-white text-center border-b-[2px] w-[90%] md:w-80' onChange={(e)=>setCountry(e.target.value)} />
+                    <input placeholder='Enter Country' value={country} className='focus:bg-transparent relative text-white bg-transparent placeholder:text-lg text-xl mt-3 focus:outline-none placeholder:text-white text-center border-b-[2px] w-[90%] ' onChange={(e)=>setCountry(e.target.value)} />
                     <IconContext.Provider value={{ color: "white", className: "global-class-name" ,size:'2rem'}}>
 
                         <a href='https://www.nationsonline.org/oneworld/country_code_list.htm' target='_blank' className='relative ' alt='country codes'  onMouseOver={handleAlert} onMouseLeave={handleLeave}><FiAlertCircle/>
-                       {alertMessage && <div className='text-white bg-black/60 p-2 rounded-md  text-sm  w-fit'> Enter Country codes In 2 Letters Click here to Know</div>}
+                       {alertMessage && <div className='text-white bg-black/80  rounded-md p-1 text-sm absolute -left-32  mt-1 z-10  w-44 h-14'> Enter Country codes In 2 Letters Click here to Know</div>}
                         </a> 
 
                     </IconContext.Provider>
                     </div>
-                    <input placeholder='Enter Category' value={category}className="focus:bg-transparent text-white bg-transparent placeholder:text-lg text-xl mt-3 focus:outline-none placeholder:text-white text-center border-b-[2px] w-[90%] md:w-80 " onChange={(e)=>setCategory(e.target.value)} />
+                    <input placeholder='Enter Category' value={category}className="focus:bg-transparent text-white bg-transparent placeholder:text-lg text-xl mt-3 focus:outline-none placeholder:text-white text-center border-b-[2px] w-[90%]  " onChange={(e)=>setCategory(e.target.value)} />
                     <button onClick={(e)=>handleSubmit(e)}  className=" bg-black  text-white p-2 mt-2 rounded-md " >submit</button>
                 </form>
             </div>

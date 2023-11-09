@@ -38,18 +38,14 @@ const App = () => {
 
   return (
     <>
-    <div className=" w-8 h-8 z-20 bg-black absolute  top-[50vh]  rounded-tr-lg rounded-br-lg hover:bg-white/40  " >
+    <div className="w-14 h-14 z-20 bg-black absolute flex items-center  -left-8 p-6  top-[45vh]  rounded-full hover:bg-black/40  " >
       <button onClick={()=>setNews(!news)}>
        <IconContext.Provider value={{className:'icons',size:'2rem'}}>
 
          { user && news ?<TiArrowSortedDown/>: <TiArrowSortedUp/>}
 
        </IconContext.Provider>
-       <IconContext.Provider value={{className:'',size:'2rem',color:'white'}}>
-
-         <GiNewspaper/>
-
-       </IconContext.Provider>
+       
       </button>
        
       </div>
